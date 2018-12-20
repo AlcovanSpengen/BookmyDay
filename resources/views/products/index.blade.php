@@ -23,7 +23,7 @@
                     <th>Genre</th>
                     <th>Author</th>
                     <th>Booktype</th>
-                    <th>Created at</th>
+                    <th>Price</th>
                     <th>ISBN</th>
                     <th></th>
                 </thead>
@@ -41,7 +41,7 @@
                             <td>@foreach ($product->booktypes as $booktype)
                                 {{ $booktype->name }}
                                 @endforeach</td>
-                            <td>{{ date('M j, Y H:i', strtotime($product->created_at)) }}</td>
+                            <td>€{{ $product->price }}</td>
                             <td>{{ $product->ISBN }}</td>
                             <td><a href="{{ route('products.show', $product->id) }}" class="btn btn-default">View</a><a href="{{ route('products.edit', $product->id) }}" class="btn btn-default">Edit</a></td>
                         </tr>

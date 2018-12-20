@@ -9,7 +9,7 @@
         </div>
         <h1>{{ $product->title }}</h1>
         <p>{{ $product->abstract }}</p>
-        <P>Price</p>
+        <P>€{{ $product->price }}</p>
         <p class="btn-holder"><a href="{{ url('add-to-cart/'.$product->id) }}" class="btn btn-warning btn-block text-center" role="button">Add to cart</a> </p>
         <br>
         <br>

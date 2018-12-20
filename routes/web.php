@@ -33,6 +33,7 @@ Route::get('book', 'BookController@getIndex');
 
 Route::get('book/{id}', ['as' => 'book.single', 'uses' => 'BookController@getSingle']);
 
+
 // Shopping cart
 Route::resource('cart', 'CartController');
 Route::get('add-to-cart/{id}', 'CartController@addToCart');
@@ -57,13 +58,15 @@ Route::get('/checkout', function () {
 });
 
 //categorieen 
-Route::get('/literatuur', function () {
-    return view('categorieen.literatuur');
-});
 
-Route::get('/hobby', function () {
-    return view('categorieen.hobby');
-});
+
+Route::get('literatuur', ['uses' => 'PageController@getLiteratuur', 'as' => 'categorieen.literatuur']);
+
+
+
+Route::get('hobby', ['uses' => 'PageController@getHobby', 'as' => 'categorieen.hobby']);
+
+
 Route::get('/hobby/kookboeken', function () {
     return view('categorieen.sub-categorie.hobby.kookboeken');
 });
@@ -74,11 +77,8 @@ Route::get('/hobby/reisboeken', function () {
     return view('categorieen.sub-categorie.hobby.reisboeken');
 });
 
-Route::get('/informatief', function () {
-    return view('categorieen.informatief');
-});
 
-
+Route::get('informatief', ['uses' => 'PageController@getInformatief', 'as' => 'categorieen.informatief']);
 
 Route::get('stripboeken', ['uses' => 'PageController@getStripboeken', 'as' => 'categorieen.stripboeken']);
 
@@ -94,20 +94,20 @@ Route::get('/stripboeken/manga', function () {
     return view('categorieen.sub-categorie.stripboeken.manga');
 });
 
-Route::get('/kinderboeken', function () {
-    return view('categorieen.kinderboeken');
-});
+Route::get('payed', ['uses' => 'PageController@getPayed', 'as' => 'pages.payed']);
 
-Route::get('/kinderboeken/prentenboeken', function () {
-    return view('categorieen.sub-categorie.kinderboeken.prentenboeken');
-});
+Route::get('kinderboeken', ['uses' => 'PageController@getKinderboeken', 'as' => 'categorieen.kinderboeken']);
 
-Route::get('/kinderboeken/kleurboeken', function () {
-    return view('categorieen.sub-categorie.kinderboeken.kleurboeken');
-});
-Route::get('/kinderboeken/verhalenensprookjes', function () {
-    return view('categorieen.sub-categorie.kinderboeken.verhalenensprookjes');
-});
+
+Route::get('kinderboeken/prentenboeken', ['uses' => 'PageController@getPrentenboeken', 'as' => 'categorieen.sub-categorie.kinderboeken.prentenboeken']);
+
+
+
+Route::get('kinderboeken/kleurboeken', ['uses' => 'PageController@getKleurboeken', 'as' => 'categorieen.sub-categorie.kinderboeken.kleurboeken']);
+
+
+Route::get('kinderboeken/verhalenensprookjes', ['uses' => 'PageController@getVerhalenensprookjes', 'as' => 'categorieen.sub-categorie.kinderboeken.verhalenensprookjes']);
+
 Route::get('/literatuur/poezie', function () {
     return view('categorieen.sub-categorie.literatuur.poezie');
 });
@@ -139,13 +139,13 @@ Route::get('/gezondheid/zwangerschap', function () {
     return view('categorieen.sub-categorie.gezondheid.zwangerschap');
 });
 
-Route::get('/gezondheid', function () {
-    return view('categorieen.gezondheid');
-});
 
-Route::get('/religie', function () {
-    return view('categorieen.religie');
-});
+
+Route::get('gezondheid', ['uses' => 'PageController@getGezondheid', 'as' => 'categorieen.gezondheid']);
+
+
+
+Route::get('religie', ['uses' => 'PageController@getReligie', 'as' => 'categorieen.religie']);
 
 Route::get('/religie/spiritualiteit', function () {
     return view('categorieen.sub-categorie.religie.spiritualiteit');

@@ -7,9 +7,9 @@
                             @if (count($images) > 0)
                                 @foreach($images as $image)
                                     <div class="col-md-2">
-                                        <img class="img-fluid mx-auto d-block" src="images/{{ $image->image }}">
+                                    <a href="{{ url('/kinderboeken/prentenboeken') }}"><img class="img-fluid mx-auto d-block" src="images/{{ $image->image }}"></a>
                                         <div class="card-body">
-                                            <a class="btn btn-primary">Button</a>
+                                            
                                         </div>
                                     </div>
                                 @endforeach
@@ -17,31 +17,31 @@
                             <div class="col-md-2">
                                     <img class="img-fluid mx-auto d-block" src="images/7zussen.jpg">
                                     <div class="card-body">
-                                            <a class="btn btn-primary">Button</a>
+                                            
                                     </div>
                                 </div>
                                 <div class="col-md-2">
                                     <img class="img-fluid mx-auto d-block" src="images/aardbevingen.jpg" >
                                     <div class="card-body">
-                                            <a class="btn btn-primary">Button</a>
+                                            
                                     </div>
                                 </div>
                                 <div class="col-md-2">
                                     <img class="img-fluid mx-auto d-block" src="images/geluk.jpg" >
                                     <div class="card-body">
-                                            <a class="btn btn-primary">Button</a>
+                                            
                                     </div>
                                 </div>
                                 <div class="col-md-2">
                                     <img class="img-fluid mx-auto d-block" src="images/heterdaad.jpg" >
                                     <div class="card-body">
-                                            <a class="btn btn-primary">Button</a>
+                                            
                                     </div>
                                 </div>
                                 <div class="col-md-2">
                                     <img class="img-fluid mx-auto d-block" src="images/reuzenperzik.jpg" >
                                     <div class="card-body">
-                                            <a class="btn btn-primary">Button</a>
+                                            
                                     </div>
                                 </div>                                
                             @endif
@@ -56,9 +56,9 @@
                             @if (count($images2) > 0)
                                 @foreach($images2 as $image2)
                                     <div class="col-md-2">
-                                        <img class="img-fluid mx-auto d-block" src="images/{{ $image->image }}">
+                                    <a href="{{ url('/kinderboeken/prentenboeken') }}"><img class="img-fluid mx-auto d-block" src="images/{{ $image2->image }}"></a>
                                         <div class="card-body">
-                                            <a class="btn btn-primary">Button</a>
+                                            
                                         </div>
                                     </div>
                                 @endforeach
@@ -67,31 +67,31 @@
                                 <div class="col-md-2">
                                     <img class="img-fluid mx-auto d-block" src="images/obama.jpg" >
                                     <div class="card-body">
-                                            <a class="btn btn-primary">Button</a>
+                                            
                                     </div>
                                 </div>
                                 <div class="col-md-2">
                                     <img class="img-fluid mx-auto d-block" src="images/gorgels.jpg" >
                                     <div class="card-body">
-                                            <a class="btn btn-primary">Button</a>
+                                            
                                     </div>
                                 </div>
                                 <div class="col-md-2">
                                     <img class="img-fluid mx-auto d-block" src="images/taal.jpg"  >
                                     <div class="card-body">
-                                            <a class="btn btn-primary">Button</a>
+                                            
                                     </div>
                                 </div>
                                 <div class="col-md-2">
                                     <img class="img-fluid mx-auto d-block" src="images/building.jpg" >
                                     <div class="card-body">
-                                            <a class="btn btn-primary">Button</a>
+                                            
                                     </div>
                                 </div>
                                 <div class="col-md-2">
                                     <img class="img-fluid mx-auto d-block" src="images/nieuwe.jpg" >
                                     <div class="card-body">
-                                            <a class="btn btn-primary">Button</a>
+                                            
                                     </div>
                                 </div>
                             @endif

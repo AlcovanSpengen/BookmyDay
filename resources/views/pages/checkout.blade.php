@@ -18,7 +18,7 @@
               <div class="card">
     
                 <!--Card content-->
-                <form class="card-body">
+                <form class="card-body" action="{{ route('pages.payed') }}">
     
                   <!--Grid row-->
                   <div class="row">
@@ -83,7 +83,7 @@
                     <div class="col-lg-4 col-md-12 mb-4">
     
                       <label for="country">Land</label>
-                      <select class="custom-select d-block w-100" id="country" required>
+                      <select class="custom-select d-block w-100" id="country">
                         <option value="">Kies...</option>
                         <option>Nederland</option>
                       </select>
@@ -98,7 +98,7 @@
                     <div class="col-lg-4 col-md-6 mb-4">
     
                       <label for="state">Plaats</label>
-                      <select class="custom-select d-block w-100" id="state" required>
+                      <select class="custom-select d-block w-100" id="state">
                         <option value="">Kies...</option>
                         <option>Groningen</option>
                       </select>
@@ -113,7 +113,7 @@
                     <div class="col-lg-4 col-md-6 mb-4">
     
                       <label for="zip">Postcode</label>
-                      <input type="text" class="form-control" id="zip" placeholder="" required>
+                      <input type="text" class="form-control" id="zip" placeholder="">
                       <div class="invalid-feedback">
                         Postcode noodzakelijk
                       </div>
@@ -139,22 +139,22 @@
     
                   <div class="d-block my-3">
                     <div class="custom-control custom-radio">
-                      <input id="credit" name="paymentMethod" type="radio" class="custom-control-input" checked required>
+                      <input id="credit" name="paymentMethod" type="radio" class="custom-control-input" checked>
                       <label class="custom-control-label" for="credit">Credit card</label>
                     </div>
                     <div class="custom-control custom-radio">
-                      <input id="debit" name="paymentMethod" type="radio" class="custom-control-input" required>
+                      <input id="debit" name="paymentMethod" type="radio" class="custom-control-input">
                       <label class="custom-control-label" for="debit">iDeal</label>
                     </div>
                     <div class="custom-control custom-radio">
-                      <input id="paypal" name="paymentMethod" type="radio" class="custom-control-input" required>
+                      <input id="paypal" name="paymentMethod" type="radio" class="custom-control-input">
                       <label class="custom-control-label" for="paypal">Paypal</label>
                     </div>
                   </div>
                   <div class="row">
                     <div class="col-md-6 mb-3">
                       <label for="cc-name">Naam van kaart</label>
-                      <input type="text" class="form-control" id="cc-name" placeholder="" required>
+                      <input type="text" class="form-control" id="cc-name" placeholder="">
                       <small class="text-muted">Volledige naam als op de kaart</small>
                       <div class="invalid-feedback">
                         De naam is verplicht
@@ -162,7 +162,7 @@
                     </div>
                     <div class="col-md-6 mb-3">
                       <label for="cc-number">Credit card number</label>
-                      <input type="text" class="form-control" id="cc-number" placeholder="" required>
+                      <input type="text" class="form-control" id="cc-number" placeholder="">
                       <div class="invalid-feedback">
                         Credit card nummer is verplicht
                       </div>
@@ -171,14 +171,14 @@
                   <div class="row">
                     <div class="col-md-3 mb-3">
                       <label for="cc-expiration">Vervaltijd</label>
-                      <input type="text" class="form-control" id="cc-expiration" placeholder="" required>
+                      <input type="text" class="form-control" id="cc-expiration" placeholder="">
                       <div class="invalid-feedback">
                         Vervaldatum vereist
                       </div>
                     </div>
                     <div class="col-md-3 mb-3">
                       <label for="cc-expiration">CVV</label>
-                      <input type="text" class="form-control" id="cc-cvv" placeholder="" required>
+                      <input type="text" class="form-control" id="cc-cvv" placeholder="">
                       <div class="invalid-feedback">
                         Beveiligingscode vereist
                       </div>

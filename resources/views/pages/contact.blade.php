@@ -32,12 +32,14 @@
                 </label>
             </div>
             <div class="form-group">
-                <textarea name="message" id="message" cols="30" rows="10">
+                <textarea name="message" class="form-control" id="message" cols="30" rows="10">
 Schrijf uw bericht hier . . .
                 </textarea>
             </div>
-            <input type="submit" value="Stuur bericht">
+            <input type="submit" class="btn btn-success" value="Stuur bericht">
+            <br>
         </form>
+        <br>
     </div>
 </div>
 @endsection

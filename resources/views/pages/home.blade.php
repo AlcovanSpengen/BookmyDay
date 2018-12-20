@@ -3,7 +3,8 @@
 @section('title', '| Home')
 
 @section('content')
-
+<br>
+<h4>Nieuwste Boeken</h4><br>
   @include ('partials._carousel')
   <br>
   <br>
@@ -34,9 +35,24 @@
     </a>
   </div>
 <br>
-<!-- Six equal columns -->
-<h3>Boeken in de Media</h3>
+<!-- Five equal columns -->
+<h4>Boeken Top 5</h4><br>
 <div class="row">
+@if (count($images3) > 0)
+    @foreach($images3 as $image3)
+
+    <div class="col">
+      <div class="card" style="width: 12rem">
+      <a href="{{ url('/book') }}"><img class="img-fluid mx-auto d-block" src="images/{{ $image3->image }}"></a>
+        <div class="card-body">
+          <h5 class="card-title">{{ $image3->title }}</h5>
+          <p class="card-text">{{ $image3->abstract }}</p>
+        </div>
+      </div>
+    </div>
+    @endforeach
+@else
+
     <div class="col">
       <div class="card" style="width: 12rem">
         <img class="card-img-top" src="images/jochem_meyer.jpg" alt="Card image cap">
@@ -87,13 +103,26 @@
         </div>
       </div>
     </div>
-    
+    @endif
   </div>
 <br>
 <!-- Six equal columns -->
 
-<h3>Boekentoppers met Gratis Verzenden</h3>
+<h4>Meest populair</h4>
 <div class="row">
+@if (count($images4) > 0)
+    @foreach($images4 as $image4)
+    <div class="col">
+      <div class="card" style="width: 12rem">
+      <a href="{{ url('/book') }}"><img class="img-fluid mx-auto d-block" src="images/{{ $image4->image }}"></a>
+        <div class="card-body">
+          <h5 class="card-title">{{ $image4->title }}</h5>
+          <p class="card-text">{{ $image4->abstract }}</p>
+        </div>
+      </div>
+    </div>
+    @endforeach
+@else
     <div class="col">
       <div class="card" style="width: 12rem;">
         <img class="card-img-top" src="images/michelle_obama.jpg" alt="Card image cap">
@@ -144,7 +173,7 @@
         </div>
       </div>
     </div>
-    
+    @endif
   </div>
 <br>
   <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -248,6 +277,7 @@
                       <br />
                       <input type="submit" value="Schrijf je nu in" class="btn btn-large" />
                   </form>
+                  <br>
               </div>    
           </div>
     </div>

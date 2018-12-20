@@ -16,15 +16,15 @@
             </div>
             <br>
             <div class="col-md-4">
-                <a href="{{ route('book.single', $product->id) }}" class="btn btn-lg btn-block btn-primary">View Product</a>
-                <p>€{{ $product->price }}</p>
+                <a href="{{ route('book.single', $product->id) }}" class="btn btn-lg btn-block btn-primary">View Product</a><br>
+                <h5>€{{ $product->price }}</h5>
             </div>
             <hr>
         @endforeach
     </div>
 </div>
 
-
+<div class="text-center">{!! $products->links(); !!}</div>
     
 
 @endsection

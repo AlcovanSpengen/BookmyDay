@@ -6,7 +6,7 @@
 <br>
     </div>
 <div class="row">
-    <h1>Prentenboeken</h1>
+    <h1>Verhalen & Sprookjes</h1>
     <div class="col-md-12">
     <br>
             @foreach ($images as $image)

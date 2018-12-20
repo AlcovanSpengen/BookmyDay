@@ -61,7 +61,7 @@
                                         </button>
                                         <div class="dropdown-menu">
                                             <div class="row total-header-section">
-                                                <div class="col-lg-6 col-sm-6 col-6">
+                                                <div class="col-lg-12 col-sm-12 col-12">
                                                     <i class="fa fa-shopping-cart" aria-hidden="true"></i> <span class="badge badge-pill badge-danger"> {{ count(session('cart')) }}</span>
                                                 </div>
                         
@@ -70,7 +70,7 @@
                                                     <?php $total += $details['price'] * $details['quantity'] ?>
                                                 @endforeach
                         
-                                                <div class="col-lg-6 col-sm-6 col-6 total-section text-right">
+                                                <div class="col-lg-12 col-sm-12 col-12 total-section text-right">
                                                     <p>Total: <span class="text-info">€ {{ $total }}</span></p>
                                                 </div>
                                             </div>

@@ -10,8 +10,8 @@ class BookController extends Controller
 {
     public function getIndex() 
     {
-        $products = Product::orderBy('created_at', 'desc')->paginate(10);
-
+        $products = Product::orderBy('id', 'desc')->paginate(10);
+        
         return view('book.index')->withProducts($products);
     }
     public function getSingle($id) 
