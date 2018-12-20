@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a1c655327d7ab78fdeb7bc567f23c902",
+    "content-hash": "fe300d9fac6ac9ade005ed8d38fe5304",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -38,6 +38,237 @@
             ],
             "description": "implementation of xdg base directory specification for php",
             "time": "2014-10-24T07:27:01+00:00"
+        },
+        {
+            "name": "doctrine/cache",
+            "version": "v1.8.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/doctrine/cache.git",
+                "reference": "d768d58baee9a4862ca783840eca1b9add7a7f57"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/doctrine/cache/zipball/d768d58baee9a4862ca783840eca1b9add7a7f57",
+                "reference": "d768d58baee9a4862ca783840eca1b9add7a7f57",
+                "shasum": ""
+            },
+            "require": {
+                "php": "~7.1"
+            },
+            "conflict": {
+                "doctrine/common": ">2.2,<2.4"
+            },
+            "require-dev": {
+                "alcaeus/mongo-php-adapter": "^1.1",
+                "doctrine/coding-standard": "^4.0",
+                "mongodb/mongodb": "^1.1",
+                "phpunit/phpunit": "^7.0",
+                "predis/predis": "~1.0"
+            },
+            "suggest": {
+                "alcaeus/mongo-php-adapter": "Required to use legacy MongoDB driver"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.8.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Doctrine\\Common\\Cache\\": "lib/Doctrine/Common/Cache"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Roman Borschel",
+                    "email": "roman@code-factory.org"
+                },
+                {
+                    "name": "Benjamin Eberlei",
+                    "email": "kontakt@beberlei.de"
+                },
+                {
+                    "name": "Guilherme Blanco",
+                    "email": "guilhermeblanco@gmail.com"
+                },
+                {
+                    "name": "Jonathan Wage",
+                    "email": "jonwage@gmail.com"
+                },
+                {
+                    "name": "Johannes Schmitt",
+                    "email": "schmittjoh@gmail.com"
+                }
+            ],
+            "description": "Caching library offering an object-oriented API for many cache backends",
+            "homepage": "https://www.doctrine-project.org",
+            "keywords": [
+                "cache",
+                "caching"
+            ],
+            "time": "2018-08-21T18:01:43+00:00"
+        },
+        {
+            "name": "doctrine/dbal",
+            "version": "v2.9.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/doctrine/dbal.git",
+                "reference": "ec74d6e300d78fbc896669c3ca57ef9719adc9c6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/doctrine/dbal/zipball/ec74d6e300d78fbc896669c3ca57ef9719adc9c6",
+                "reference": "ec74d6e300d78fbc896669c3ca57ef9719adc9c6",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/cache": "^1.0",
+                "doctrine/event-manager": "^1.0",
+                "ext-pdo": "*",
+                "php": "^7.1"
+            },
+            "require-dev": {
+                "doctrine/coding-standard": "^5.0",
+                "jetbrains/phpstorm-stubs": "^2018.1.2",
+                "phpstan/phpstan": "^0.10.1",
+                "phpunit/phpunit": "^7.4",
+                "symfony/console": "^2.0.5|^3.0|^4.0",
+                "symfony/phpunit-bridge": "^3.4.5|^4.0.5"
+            },
+            "suggest": {
+                "symfony/console": "For helpful console commands such as SQL execution and import of files."
+            },
+            "bin": [
+                "bin/doctrine-dbal"
+            ],
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.9.x-dev",
+                    "dev-develop": "3.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Doctrine\\DBAL\\": "lib/Doctrine/DBAL"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Roman Borschel",
+                    "email": "roman@code-factory.org"
+                },
+                {
+                    "name": "Benjamin Eberlei",
+                    "email": "kontakt@beberlei.de"
+                },
+                {
+                    "name": "Guilherme Blanco",
+                    "email": "guilhermeblanco@gmail.com"
+                },
+                {
+                    "name": "Jonathan Wage",
+                    "email": "jonwage@gmail.com"
+                }
+            ],
+            "description": "Powerful PHP database abstraction layer (DBAL) with many features for database schema introspection and management.",
+            "homepage": "https://www.doctrine-project.org/projects/dbal.html",
+            "keywords": [
+                "abstraction",
+                "database",
+                "dbal",
+                "mysql",
+                "persistence",
+                "pgsql",
+                "php",
+                "queryobject"
+            ],
+            "time": "2018-12-14T04:51:13+00:00"
+        },
+        {
+            "name": "doctrine/event-manager",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/doctrine/event-manager.git",
+                "reference": "a520bc093a0170feeb6b14e9d83f3a14452e64b3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/doctrine/event-manager/zipball/a520bc093a0170feeb6b14e9d83f3a14452e64b3",
+                "reference": "a520bc093a0170feeb6b14e9d83f3a14452e64b3",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.1"
+            },
+            "conflict": {
+                "doctrine/common": "<2.9@dev"
+            },
+            "require-dev": {
+                "doctrine/coding-standard": "^4.0",
+                "phpunit/phpunit": "^7.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Doctrine\\Common\\": "lib/Doctrine/Common"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Roman Borschel",
+                    "email": "roman@code-factory.org"
+                },
+                {
+                    "name": "Benjamin Eberlei",
+                    "email": "kontakt@beberlei.de"
+                },
+                {
+                    "name": "Guilherme Blanco",
+                    "email": "guilhermeblanco@gmail.com"
+                },
+                {
+                    "name": "Jonathan Wage",
+                    "email": "jonwage@gmail.com"
+                },
+                {
+                    "name": "Johannes Schmitt",
+                    "email": "schmittjoh@gmail.com"
+                },
+                {
+                    "name": "Marco Pivetta",
+                    "email": "ocramius@gmail.com"
+                }
+            ],
+            "description": "Doctrine Event Manager component",
+            "homepage": "https://www.doctrine-project.org/projects/event-manager.html",
+            "keywords": [
+                "event",
+                "eventdispatcher",
+                "eventmanager"
+            ],
+            "time": "2018-06-11T11:59:03+00:00"
         },
         {
             "name": "doctrine/inflector",
@@ -265,6 +496,77 @@
                 "validator"
             ],
             "time": "2018-12-04T22:38:24+00:00"
+        },
+        {
+            "name": "encore/laravel-admin",
+            "version": "v1.6.8",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/z-song/laravel-admin.git",
+                "reference": "818e6691f6ed419f9d30ad4aaca0846fb1243313"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/z-song/laravel-admin/zipball/818e6691f6ed419f9d30ad4aaca0846fb1243313",
+                "reference": "818e6691f6ed419f9d30ad4aaca0846fb1243313",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/dbal": "2.*",
+                "laravel/framework": "~5.5",
+                "php": ">=7.0.0",
+                "symfony/dom-crawler": "~3.1|~4.0"
+            },
+            "require-dev": {
+                "fzaninotto/faker": "~1.4",
+                "intervention/image": "~2.3",
+                "laravel/browser-kit-testing": "^2.0",
+                "laravel/laravel": "~5.5",
+                "phpunit/phpunit": "~6.0",
+                "symfony/css-selector": "~3.1"
+            },
+            "suggest": {
+                "intervention/image": "Required to handling and manipulation upload images (~2.3).",
+                "spatie/eloquent-sortable": "Required to built orderable gird."
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Encore\\Admin\\AdminServiceProvider"
+                    ],
+                    "aliases": {
+                        "Admin": "Encore\\Admin\\Facades\\Admin"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Encore\\Admin\\": "src/"
+                },
+                "files": [
+                    "src/helpers.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "zsong",
+                    "email": "zosong@126.com"
+                }
+            ],
+            "description": "laravel admin",
+            "homepage": "https://github.com/z-song/laravel-admin",
+            "keywords": [
+                "admin",
+                "form",
+                "grid",
+                "laravel"
+            ],
+            "time": "2018-12-13T06:35:28+00:00"
         },
         {
             "name": "erusev/parsedown",
@@ -759,16 +1061,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v5.7.16",
+            "version": "v5.7.19",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "9acea9e0a356cba7e6a13f8784d5532a82fee92a"
+                "reference": "5c1d1ec7e8563ea31826fd5eb3f6791acf01160c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/9acea9e0a356cba7e6a13f8784d5532a82fee92a",
-                "reference": "9acea9e0a356cba7e6a13f8784d5532a82fee92a",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/5c1d1ec7e8563ea31826fd5eb3f6791acf01160c",
+                "reference": "5c1d1ec7e8563ea31826fd5eb3f6791acf01160c",
                 "shasum": ""
             },
             "require": {
@@ -901,7 +1203,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2018-12-05T14:36:24+00:00"
+            "time": "2018-12-18T14:00:38+00:00"
         },
         {
             "name": "laravel/nexmo-notification-channel",
@@ -962,16 +1264,16 @@
         },
         {
             "name": "laravel/slack-notification-channel",
-            "version": "v1.0.2",
+            "version": "v1.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/slack-notification-channel.git",
-                "reference": "0ede60acbbf5f91be2e45d0c0b4d95e2f3837252"
+                "reference": "6e164293b754a95f246faf50ab2bbea3e4923cc9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/slack-notification-channel/zipball/0ede60acbbf5f91be2e45d0c0b4d95e2f3837252",
-                "reference": "0ede60acbbf5f91be2e45d0c0b4d95e2f3837252",
+                "url": "https://api.github.com/repos/laravel/slack-notification-channel/zipball/6e164293b754a95f246faf50ab2bbea3e4923cc9",
+                "reference": "6e164293b754a95f246faf50ab2bbea3e4923cc9",
                 "shasum": ""
             },
             "require": {
@@ -1015,7 +1317,7 @@
                 "notifications",
                 "slack"
             ],
-            "time": "2018-12-04T12:58:59+00:00"
+            "time": "2018-12-12T13:12:06+00:00"
         },
         {
             "name": "laravel/tinker",
@@ -1196,7 +1498,7 @@
                 {
                     "name": "Luís Otávio Cobucci Oblonczyk",
                     "email": "lcobucci@gmail.com",
-                    "role": "Developer"
+                    "role": "developer"
                 }
             ],
             "description": "A simple library to work with JSON Web Token and JSON Web Signature",
@@ -1428,16 +1730,16 @@
         },
         {
             "name": "nexmo/client",
-            "version": "1.5.2",
+            "version": "1.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Nexmo/nexmo-php.git",
-                "reference": "f192c84ec3cc3e2657fc754e0da1a17e39ac5542"
+                "reference": "01809cc1e17a5af275913c49bb5d444eb6cc06d4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Nexmo/nexmo-php/zipball/f192c84ec3cc3e2657fc754e0da1a17e39ac5542",
-                "reference": "f192c84ec3cc3e2657fc754e0da1a17e39ac5542",
+                "url": "https://api.github.com/repos/Nexmo/nexmo-php/zipball/01809cc1e17a5af275913c49bb5d444eb6cc06d4",
+                "reference": "01809cc1e17a5af275913c49bb5d444eb6cc06d4",
                 "shasum": ""
             },
             "require": {
@@ -1472,7 +1774,7 @@
                 }
             ],
             "description": "PHP Client for using Nexmo's API.",
-            "time": "2018-11-14T14:12:22+00:00"
+            "time": "2018-12-17T10:47:50+00:00"
         },
         {
             "name": "nikic/php-parser",
@@ -1527,16 +1829,16 @@
         },
         {
             "name": "opis/closure",
-            "version": "3.1.1",
+            "version": "3.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/opis/closure.git",
-                "reference": "d3209e46ad6c69a969b705df0738fd0dbe26ef9e"
+                "reference": "de00c69a2328d3ee5baa71fc584dc643222a574c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/opis/closure/zipball/d3209e46ad6c69a969b705df0738fd0dbe26ef9e",
-                "reference": "d3209e46ad6c69a969b705df0738fd0dbe26ef9e",
+                "url": "https://api.github.com/repos/opis/closure/zipball/de00c69a2328d3ee5baa71fc584dc643222a574c",
+                "reference": "de00c69a2328d3ee5baa71fc584dc643222a574c",
                 "shasum": ""
             },
             "require": {
@@ -1544,7 +1846,7 @@
             },
             "require-dev": {
                 "jeremeamia/superclosure": "^2.0",
-                "phpunit/phpunit": "^4.0"
+                "phpunit/phpunit": "^4.0|^5.0|^6.0|^7.0"
             },
             "type": "library",
             "extra": {
@@ -1584,7 +1886,7 @@
                 "serialization",
                 "serialize"
             ],
-            "time": "2018-10-02T13:36:53+00:00"
+            "time": "2018-12-16T21:48:23+00:00"
         },
         {
             "name": "paragonie/random_compat",
@@ -2491,6 +2793,63 @@
             "description": "Symfony Debug Component",
             "homepage": "https://symfony.com",
             "time": "2018-11-28T18:24:18+00:00"
+        },
+        {
+            "name": "symfony/dom-crawler",
+            "version": "v4.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/dom-crawler.git",
+                "reference": "7438a32108fdd555295f443605d6de2cce473159"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/dom-crawler/zipball/7438a32108fdd555295f443605d6de2cce473159",
+                "reference": "7438a32108fdd555295f443605d6de2cce473159",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.1.3",
+                "symfony/polyfill-ctype": "~1.8",
+                "symfony/polyfill-mbstring": "~1.0"
+            },
+            "require-dev": {
+                "symfony/css-selector": "~3.4|~4.0"
+            },
+            "suggest": {
+                "symfony/css-selector": ""
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "4.2-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\DomCrawler\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony DomCrawler Component",
+            "homepage": "https://symfony.com",
+            "time": "2018-11-26T10:55:26+00:00"
         },
         {
             "name": "symfony/event-dispatcher",

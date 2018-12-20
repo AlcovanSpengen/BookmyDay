@@ -1,6 +1,6 @@
 <div class="container" id="carousel">
     <div class="row">
-            <div id="carousel" class="carousel slide" data-ride="carousel" data-interval="6000">
+            <div id="carousel" class="carousel slide" data-ride="carousel" data-interval="7000">
                 <div class="carousel-inner col-sm w-100 mx-auto" role="listbox" id="img-saveurs">
                     <div class="carousel-item active">
                         <div class="row" style="width: 1194px">

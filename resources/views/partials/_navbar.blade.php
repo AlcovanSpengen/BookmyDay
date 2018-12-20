@@ -213,15 +213,15 @@
                 {{ $category5->name }}
                 @endforeach
             @else
-                Actualiteit
+                Gezondheid
             @endif
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
             @foreach($subcategories5 as $subcategory5)
-                <a class="dropdown-item" href="/actualiteit">{{ $subcategory5->name }}</a>
+                <a class="dropdown-item" href="/gezondheid">{{ $subcategory5->name }}</a>
            @endforeach
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="/actualiteit">Show all in @foreach($categories5 as $category5)
+              <a class="dropdown-item" href="/gezondheid">Show all in @foreach($categories5 as $category5)
             {{ $category5->name }}
             @endforeach</a>
             </div>
@@ -233,15 +233,15 @@
                 {{ $category6->name }}
                 @endforeach
             @else
-                Engels
+                Religie
             @endif
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
             @foreach($subcategories6 as $subcategory6)
-                <a class="dropdown-item" href="/engels">{{ $subcategory6->name }}</a>
+                <a class="dropdown-item" href="/religie">{{ $subcategory6->name }}</a>
            @endforeach
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="/engels">Show all in @foreach($categories6 as $category6)
+              <a class="dropdown-item" href="/religie">Show all in @foreach($categories6 as $category6)
             {{ $category6->name }}
             @endforeach</a>
             </div>

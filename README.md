@@ -1,2 +1,3 @@
-# Book-my-Day
-E-commerce
+BookmyDay - Ecommerce boekhandel
+
+    

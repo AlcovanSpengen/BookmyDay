@@ -64,6 +64,15 @@ Route::get('/literatuur', function () {
 Route::get('/hobby', function () {
     return view('categorieen.hobby');
 });
+Route::get('/hobby/kookboeken', function () {
+    return view('categorieen.sub-categorie.hobby.kookboeken');
+});
+Route::get('/hobby/sportboeken', function () {
+    return view('categorieen.sub-categorie.hobby.sportboeken');
+});
+Route::get('/hobby/reisboeken', function () {
+    return view('categorieen.sub-categorie.hobby.reisboeken');
+});
 
 Route::get('/informatief', function () {
     return view('categorieen.informatief');
